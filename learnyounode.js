@@ -63,6 +63,27 @@ countNewLines(logToConsole);
 
 */
 
+/*
+
+* FILTERED LS (My Solution)
+
+var fs = require('fs');
+var path = require('path');
+
+function printListOfFiles () {
+	fs.readdir(process.argv[2], function addToList (err, list) {
+		for (i = 0; i < list.length; i++) {
+			if (path.extname(list[i]) === '.' + process.argv[3]) {
+				console.log(list[i]);
+			}
+		}
+	})
+}
+
+printListOfFiles();
+
+*/
+
 
 
 // Code to be tested
